@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('evento/<titulo_evento>/', views.TituloEvento),
+    path('agenda/<int:id>', views.lista_eventos)
 ]
