@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Agenda</title>
-</head>
-<body>
+{% extends "model-page.html" %}
+
+{% block content %}
     <h2>Agendamentos</h2>
 
-    <b> Titulo: {{evento.titulo}}</b>
-    <p> Descrição: {{evento.descricao}} </p>
-    <p> Data: {{evento.data_evento}} </p>
-</body>
-</html>
+    <ul style="font-size": 18px>
+    {% for evento in eventos %}
+        <li> <b> Titulo: {{evento.titulo}}</b> - Data: {{evento.get_data_evento}} </li>
+        <p> Descrição: {{evento.descricao}} </p>
+    {% endfor%}
+    </ul>
+{% endblock %}
