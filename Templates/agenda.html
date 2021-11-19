@@ -10,6 +10,7 @@
     {% for evento in eventos %}
         <li> <b> Titulo: {{evento.titulo}}</b> - Data: {{evento.get_data_evento}} </li>
         <p> Descrição: {{evento.descricao}} </p>
+        <p> Local do Evento: {{evento.local}} </p>
     {% endfor%}
     </ul>
 {% endblock %}
